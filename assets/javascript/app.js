@@ -10,7 +10,7 @@ $(document).ready(function () {
 
 // make array of questions with attributes that resemble JSON pretty print data
 
-    questionsArray = [
+ /**   questionsArray = [
 
         {
             question1: 'What do you call a group of owls?',
@@ -116,12 +116,56 @@ $(document).ready(function () {
     ];
 
 
-    var questionsRight
+    var questionsRight = 0;
 
-    var questionsWrong
+    var questionsWrong = 0;
 
-    var questionsUnanswered
+    var questionsUnanswered = 0;
 
+*/
+
+    //Number counter
+    var number = 20;
+
+    // number counter 1.0 using a start/stop method
+
+    var intervalId
+
+    $("#Start").on("click", start);
+
+    $("#Stop").on("click", stop);
+
+
+    function start() {
+        intervalId = setInterval(decrement, 1000);
+    }
+
+    // decrement function
+    function decrement() {
+
+        number--;
+
+        $("#display-timer").html("<h2>" + number + "</h2>");
+
+
+        if (number === 0) {
+
+            stop();
+
+            alert("Time is up!");
+        }
+    }
+
+
+    // stop function
+    function stop() {
+
+        clearInterval(intervalId);
+    }
+
+
+    // Execute run function
+    start();
 
 // figure out timer situation, time is in ms so 1000 is 1 second so 20000 is 20 seconds
 
