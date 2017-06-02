@@ -174,6 +174,7 @@ $(document).ready(function () {
 
     var intervalId
 
+    console.log("dfjdhfjdjkfjkdfjdljfdjfkalkfjd")
 
 
     $("#Stop").on("click", function(){
@@ -189,10 +190,19 @@ $(document).ready(function () {
 
     }
 
-    $("#Start").on("click", function(){
+    $("#start").on("click", function(){
         $(this).hide();
         timer.start();
     });
+
+    function timer(){
+
+    $('.timer').text((new Date - start) / 1000 + " Seconds");
+    }, 1000);
+
+
+
+    }
 
 
     // decrement function
