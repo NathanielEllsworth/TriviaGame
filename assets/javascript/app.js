@@ -20,101 +20,121 @@ $(document).ready(function () {
             question: 'What do you call a group of owls?',
             answers: ['a flock', 'a school', 'a parliament', 'a group'],
             correctAnswer: 'a parliament'
+            //Image
         },
         {
             question: 'On average, how many spiders populate one acre of green area?',
             answers: ['2,000', '50', '300', '50,000'],
             correctAnswer: '50,000',
+            //Image
         },
         {
             question: 'How long can an Alligator live for?',
             answers: ['25 years', '250 years', '100 years', '50 years'],
             correctAnswer: '100 years'
+            //Image
         },
         {
             question: 'How far can an Elephant smell water?',
             answers: ['1 mile', '2 miles', '3 miles', '4 miles'],
             correctAnswer: '3 miles',
+            //Image
         },
         {
             question: 'How much of our DNA do we share with a slug?',
             answers: ['70%', '99%', '20%', '30%'],
             correctAnswer: '70%',
+            //Image
         },
         {
             question: 'What is the average heart beat of a whale?',
             answers: ['9 times per minute', '60 times per minute', '12 times per minute', '30 times per minute'],
             correctAnswer: '9 times per minute',
+            //Image
         },
         {
             question: 'How much can a single elephant tooth weigh?',
             answers: ['1 pound', '4 pounds', '9 pounds', '10 pounds'],
             correctAnswer: '9 pounds',
+            //Image
         },
         {
             question: 'How many eyes does a butterfly have?',
             answers: ['2', '8', '12', '12,000'],
             correctAnswer: '12,000',
+            //Image
         },
         {
             question: 'Currently, what animal creates the loudest sound of any living creature?',
             answers: ['Lions', 'howler monkeys', 'Elephants', 'Blue Whales'],
             correctAnswer: '12,000',
+            //Image
         },
         {
             question: 'How many eggs does the average chicken lay per year?',
             answers: ['360', '260', '160', '60'],
             correctAnswer: '260',
+            //Image
         },
         {
             question: 'Penguins can jump how many feet out of the water?',
             answers: ['3', '6', '8', '10'],
             correctAnswer: '6',
+            //Image
         },
         {
             question: 'What animal is found on the Firefox logo?',
             answers: ['a panda', 'a fox', 'a wolf', 'a cat'],
             correctAnswer: 'a panda',
+            //Image
         },
         {
             question: 'Turkeys have a poor sense of smell, but an excellent sense of',
             answers: ['sight', 'taste', 'direction', 'humor'],
             correctAnswer: 'taste',
+            //Image
         },
         {
             question: 'What percent of pet owners sleep with their dogs?',
             answers: ['79', '83', '88', '72'],
             correctAnswer: '79',
+            //Image
         },
         {
             question: 'What is the average lifespan of 75% of all wild birds?',
             answers: ['6 months', '1 year', '3 years', '5 years'],
             correctAnswer: '6 months',
+            //Image
         },
         {
             question: 'The oldest recorded elephant lived for?',
             answers: ['74 years', '88 years', '92 years', '82 years'],
             correctAnswer: '82 years',
+            //Image
         },
         {
             question: 'The oldest recorded elephant lived for?',
             answers: ['74 years', '88 years', '92 years', '82 years'],
             correctAnswer: '82 years',
+            //Image
         },
         {
             question: "An adult lion's roar is so loud it can be herd from ____ miles away.",
             answers: ['12', '2', '5', '7'],
             correctAnswer: '5',
+            //Image
         },
         {
             question: "A male gorilla can eat how many pounds of food a day?",
             answers: ['5 pounds', '10 pounds', '20 pounds', '40 pounds'],
             correctAnswer: '40 pounds',
+            //Image
         },
         {
             question: "Ants are found throughout the world except in?",
             answers: ['Figii', 'New Zealand', 'Iceland', 'Russia'],
             correctAnswer: 'Iceland',
+            //Image
         },
 
     ];
@@ -189,6 +209,9 @@ $(document).ready(function () {
     }
 */
 
+
+// Connecting quest-butn and timer on HTML page-----------------
+
     var questionsCounter = 0;
 
     $("body").append( $('<p id="timerText">') );
@@ -199,6 +222,9 @@ $(document).ready(function () {
     $("body").append( $('<button id="ANS3">') );
     $("body").append( $('<button id="ANS4">') );
 
+
+
+// Basic timer function---------------------------------
 
     var remainingTime = 1;
     function showTimerRemaining() {
@@ -217,6 +243,12 @@ $(document).ready(function () {
         }
     }
 
+// Basic timer function---------------------------------
+
+
+
+// Display each question and answer choices inside the questionArray--------------
+
     function showQuestion() {
         var q = questionsArray[questionsCounter];
         $("#QUESTION").text(q.question);
@@ -226,6 +258,8 @@ $(document).ready(function () {
         $("#ANS4").text(q.answers[3]);
     }
 
+
+// Starts the game when the start button is clicked------------------
 
     $("#start").on("click", function(){
         $(this).hide();
