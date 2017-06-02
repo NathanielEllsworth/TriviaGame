@@ -10,11 +10,15 @@ $(document).ready(function () {
 
 // make array of questions with attributes that resemble JSON pretty print data
 
- /**   questionsArray = [
+    questionsArray = [
+
+        /**
+         * questionsArray[0].question.answers[2]
+         */
 
         {
             question1: 'What do you call a group of owls?',
-            answers: 'a flock', 'a school', 'a parliament', 'a group',
+            answers: ['a flock', 'a school', 'a parliament', 'a group',]
             correctAnswer: 'a parliament'
         },
         {
@@ -103,12 +107,12 @@ $(document).ready(function () {
             correctAnswer: '5',
         },
         {
-            question19: "A male gorilla can eat how many pounds of food a day?",
+            question: "A male gorilla can eat how many pounds of food a day?",
             answers: '5 pounds', '10 pounds', '20 pounds', '40 pounds',
             correctAnswer: '40 pounds',
         },
         {
-            question20: "Ants are found throughout the world except in?",
+            question: "Ants are found throughout the world except in?",
             answers: 'Figii', 'New Zealand', 'Iceland', 'Russia',
             correctAnswer: 'Iceland',
         },
@@ -122,7 +126,46 @@ $(document).ready(function () {
 
     var questionsUnanswered = 0;
 
-*/
+    //_______________________________________________________________________________
+
+    //buttons for clicking on an answer
+
+    function buttonsForClicking() {
+
+        for (var i = 0; i < questionsArray.length; i++) {
+        
+
+            $(".buttonA").html(questionsArray[i].answers [0]);
+            $(".buttonB").html(questionsArray[i].answers [1]);
+            $(".buttonC").html(questionsArray[i].answers [2]);
+            $(".buttonD").html(questionsArray[i].answers [3]);
+
+
+
+            //need to write more functions
+
+
+            /**
+             * 1 action pull out the nessisary info displayed on the page with jQuery
+             *
+             * 2 if comeone clicks a button preform the same action but with a different index
+             *
+             * 3 store the index variable, the question array will be i++ no matter what till the end of the .length
+             *
+             * check to see if my index var runs over the questionsArray.length make game over function
+             *
+             *
+             * if questionsArray.length === var and a name run game over function
+             */
+        }
+
+    }
+
+    // .
+
+
+    //_______________________________________________________________________________
+
 
     //Number counter
     var number = 20;
@@ -137,6 +180,7 @@ $(document).ready(function () {
 
 
     function start() {
+        buttonsForClicking()
         intervalId = setInterval(decrement, 1000);
     }
 
@@ -149,7 +193,7 @@ $(document).ready(function () {
 
 
         if (number === 0) {
-
+            // increase missed questions by 1++
             stop();
 
             alert("Time is up!");
