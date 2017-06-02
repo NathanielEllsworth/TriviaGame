@@ -217,10 +217,12 @@ $(document).ready(function () {
     $("body").append( $('<p id="timerText">') );
 
     $("body").append( $('<p id="QUESTION">') );
-    $("body").append( $('<button id="ANS1">') );
-    $("body").append( $('<button id="ANS2">') );
-    $("body").append( $('<button id="ANS3">') );
-    $("body").append( $('<button id="ANS4">') );
+
+// adding a "radio" type allows the user to select an answer
+    $("body").append( $('<input type="radio" id="ANS1">')  ).append( $('<p id="ANS1TXT">') );
+    $("body").append( $('<input type="radio" id="ANS2">')  ).append( $('<p id="ANS2TXT">') );
+    $("body").append( $('<input type="radio" id="ANS3">')  ).append( $('<p id="ANS3TXT">') );
+    $("body").append( $('<input type="radio" id="ANS4">')  ).append( $('<p id="ANS4TXT">') );
 
 
 
@@ -230,6 +232,7 @@ $(document).ready(function () {
     function showTimerRemaining() {
         remainingTime--;
         $("#timerText").text(remainingTime);
+
 
         if (remainingTime == 0) {
 
@@ -252,10 +255,10 @@ $(document).ready(function () {
     function showQuestion() {
         var q = questionsArray[questionsCounter];
         $("#QUESTION").text(q.question);
-        $("#ANS1").text(q.answers[0]);
-        $("#ANS2").text(q.answers[1]);
-        $("#ANS3").text(q.answers[2]);
-        $("#ANS4").text(q.answers[3]);
+        $("#ANS1TXT").text(q.answers[0]);
+        $("#ANS2TXT").text(q.answers[1]);
+        $("#ANS3TXT").text(q.answers[2]);
+        $("#ANS4TXT").text(q.answers[3]);
     }
 
 
@@ -279,28 +282,8 @@ $(document).ready(function () {
     }
 */
 
-    // decrement function
-    function decrement() {
-
-        number--;
-
-        $("#display-timer").html("<h2>" + number + "</h2>");
 
 
-        if (number === 0) {
-            // increase missed questions by 1++
-            stop();
-
-            alert("Time is up!");
-        }
-    }
-
-
-    // stop function
-    function stop() {
-
-        clearInterval(intervalId);
-    }
 
 
 
