@@ -174,27 +174,67 @@ $(document).ready(function () {
 
     var intervalId
 
-    console.log("dfjdhfjdjkfjkdfjdljfdjfkalkfjd")
+  //console.log("dfjdhfjdjkfjkdfjdljfdjfkalkfjd")
 
 
     $("#Stop").on("click", function(){
         $(this).hide();
-        timer.stop()
-
+        timer.stop();
     });
 
-
+/*
     function start() {
         buttonsForClicking()
         intervalId = setInterval(decrement, 1000);
-
     }
+*/
+
+    var questionsCounter = 0;
+
+    $("body").append( $('<p id="timerText">') );
+
+    $("body").append( $('<p id="QUESTION">') );
+    $("body").append( $('<button id="ANS1">') );
+    $("body").append( $('<button id="ANS2">') );
+    $("body").append( $('<button id="ANS3">') );
+    $("body").append( $('<button id="ANS4">') );
+
+
+    var remainingTime = 1;
+    function showTimerRemaining() {
+        remainingTime--;
+        $("#timerText").text(remainingTime);
+
+        if (remainingTime == 0) {
+
+            if (questionsCounter >= questionsArray.length) {
+                questionsCounter = -1;
+            }
+
+            questionsCounter++;
+            remainingTime = 1;
+            showQuestion();
+        }
+    }
+
+    function showQuestion() {
+        var q = questionsArray[questionsCounter];
+        $("#QUESTION").text(q.question);
+        $("#ANS1").text(q.answers[0]);
+        $("#ANS2").text(q.answers[1]);
+        $("#ANS3").text(q.answers[2]);
+        $("#ANS4").text(q.answers[3]);
+    }
+
 
     $("#start").on("click", function(){
         $(this).hide();
-        timer.start();
+        setInterval(showTimerRemaining, 1000);
+        showQuestion();
     });
 
+
+    /*
     function timer(){
 
     $('.timer').text((new Date - start) / 1000 + " Seconds");
@@ -203,7 +243,7 @@ $(document).ready(function () {
 
 
     }
-
+*/
 
     // decrement function
     function decrement() {
