@@ -17,103 +17,103 @@ $(document).ready(function () {
          */
 
         {
-            question1: 'What do you call a group of owls?',
-            answers: ['a flock', 'a school', 'a parliament', 'a group',]
+            question: 'What do you call a group of owls?',
+            answers: ['a flock', 'a school', 'a parliament', 'a group'],
             correctAnswer: 'a parliament'
         },
         {
-            question2: 'On average, how many spiders populate one acre of green area?',
-            answers: '2,000', '50', '300', '50,000',
+            question: 'On average, how many spiders populate one acre of green area?',
+            answers: ['2,000', '50', '300', '50,000'],
             correctAnswer: '50,000',
         },
         {
-            question3: 'How long can an Alligator live for?',
-            answers: '25 years', '250 years', '100 years', '50 years',
+            question: 'How long can an Alligator live for?',
+            answers: ['25 years', '250 years', '100 years', '50 years'],
             correctAnswer: '100 years'
         },
         {
-            question4: 'How far can an Elephant smell water?',
-            answers: '1 mile', '2 miles', '3 miles', '4 miles',
+            question: 'How far can an Elephant smell water?',
+            answers: ['1 mile', '2 miles', '3 miles', '4 miles'],
             correctAnswer: '3 miles',
         },
         {
-            question5: 'How much of our DNA do we share with a slug?',
-            answers: '70%', '99%', '20%', '30%',
+            question: 'How much of our DNA do we share with a slug?',
+            answers: ['70%', '99%', '20%', '30%'],
             correctAnswer: '70%',
         },
         {
-            question6: 'What is the average heart beat of a whale?',
-            answers: '9 times per minute', '60 times per minute', '12 times per minute', '30 times per minute',
+            question: 'What is the average heart beat of a whale?',
+            answers: ['9 times per minute', '60 times per minute', '12 times per minute', '30 times per minute'],
             correctAnswer: '9 times per minute',
         },
         {
-            question7: 'How much can a single elephant tooth weigh?',
-            answers: '1 pound', '4 pounds', '9 pounds', '10 pounds',
+            question: 'How much can a single elephant tooth weigh?',
+            answers: ['1 pound', '4 pounds', '9 pounds', '10 pounds'],
             correctAnswer: '9 pounds',
         },
         {
-            question8: 'How many eyes does a butterfly have?',
-            answers: '2', '8', '12', '12,000',
+            question: 'How many eyes does a butterfly have?',
+            answers: ['2', '8', '12', '12,000'],
             correctAnswer: '12,000',
         },
         {
-            question9: 'Currently, what animal creates the loudest sound of any living creature?',
-            answers: 'Lions', 'howler monkeys', 'Elephants', 'Blue Whales',
+            question: 'Currently, what animal creates the loudest sound of any living creature?',
+            answers: ['Lions', 'howler monkeys', 'Elephants', 'Blue Whales'],
             correctAnswer: '12,000',
         },
         {
-            question10: 'How many eggs does the average chicken lay per year?',
-            answers: '360', '260', '160', '60',
+            question: 'How many eggs does the average chicken lay per year?',
+            answers: ['360', '260', '160', '60'],
             correctAnswer: '260',
         },
         {
-            question11: 'Penguins can jump how many feet out of the water?',
-            answers: '3', '6', '8', '10',
+            question: 'Penguins can jump how many feet out of the water?',
+            answers: ['3', '6', '8', '10'],
             correctAnswer: '6',
         },
         {
-            question12: 'What animal is found on the Firefox logo?',
-            answers: 'a panda', 'a fox', 'a wolf', 'a cat',
+            question: 'What animal is found on the Firefox logo?',
+            answers: ['a panda', 'a fox', 'a wolf', 'a cat'],
             correctAnswer: 'a panda',
         },
         {
-            question13: 'Turkeys have a poor sense of smell, but an excellent sense of',
-            answers: 'sight', 'taste', 'direction', 'humor',
+            question: 'Turkeys have a poor sense of smell, but an excellent sense of',
+            answers: ['sight', 'taste', 'direction', 'humor'],
             correctAnswer: 'taste',
         },
         {
-            question14: 'What percent of pet owners sleep with their dogs?',
-            answers: '79', '83', '88', '72',
+            question: 'What percent of pet owners sleep with their dogs?',
+            answers: ['79', '83', '88', '72'],
             correctAnswer: '79',
         },
         {
-            question15: 'What is the average lifespan of 75% of all wild birds?',
-            answers: '6 months', '1 year', '3 years', '5 years',
+            question: 'What is the average lifespan of 75% of all wild birds?',
+            answers: ['6 months', '1 year', '3 years', '5 years'],
             correctAnswer: '6 months',
         },
         {
-            question16: 'The oldest recorded elephant lived for?',
-            answers: '74 years', '88 years', '92 years', '82 years',
+            question: 'The oldest recorded elephant lived for?',
+            answers: ['74 years', '88 years', '92 years', '82 years'],
             correctAnswer: '82 years',
         },
         {
-            question17: 'The oldest recorded elephant lived for?',
-            answers: '74 years', '88 years', '92 years', '82 years',
+            question: 'The oldest recorded elephant lived for?',
+            answers: ['74 years', '88 years', '92 years', '82 years'],
             correctAnswer: '82 years',
         },
         {
-            question18: "An adult lion's roar is so loud it can be herd from ____ miles away.",
-            answers: '12', '2', '5', '7',
+            question: "An adult lion's roar is so loud it can be herd from ____ miles away.",
+            answers: ['12', '2', '5', '7'],
             correctAnswer: '5',
         },
         {
             question: "A male gorilla can eat how many pounds of food a day?",
-            answers: '5 pounds', '10 pounds', '20 pounds', '40 pounds',
+            answers: ['5 pounds', '10 pounds', '20 pounds', '40 pounds'],
             correctAnswer: '40 pounds',
         },
         {
             question: "Ants are found throughout the world except in?",
-            answers: 'Figii', 'New Zealand', 'Iceland', 'Russia',
+            answers: ['Figii', 'New Zealand', 'Iceland', 'Russia'],
             correctAnswer: 'Iceland',
         },
 
@@ -133,12 +133,12 @@ $(document).ready(function () {
     function buttonsForClicking() {
 
         for (var i = 0; i < questionsArray.length; i++) {
-        
 
-            $(".buttonA").html(questionsArray[i].answers [0]);
-            $(".buttonB").html(questionsArray[i].answers [1]);
-            $(".buttonC").html(questionsArray[i].answers [2]);
-            $(".buttonD").html(questionsArray[i].answers [3]);
+
+            $(".buttonA").text(questionsArray[i].answers [0]);
+            $(".buttonB").text(questionsArray[i].answers [1]);
+            $(".buttonC").text(questionsArray[i].answers [2]);
+            $(".buttonD").text(questionsArray[i].answers [3]);
 
 
 
@@ -174,15 +174,26 @@ $(document).ready(function () {
 
     var intervalId
 
-    $("#Start").on("click", start);
 
-    $("#Stop").on("click", stop);
+
+    $("#Stop").on("click", function(){
+        $(this).hide();
+        timer.stop()
+
+    });
 
 
     function start() {
         buttonsForClicking()
         intervalId = setInterval(decrement, 1000);
+
     }
+
+    $("#Start").on("click", function(){
+        $(this).hide();
+        timer.start();
+    });
+
 
     // decrement function
     function decrement() {
@@ -208,8 +219,6 @@ $(document).ready(function () {
     }
 
 
-    // Execute run function
-    start();
 
 // figure out timer situation, time is in ms so 1000 is 1 second so 20000 is 20 seconds
 
